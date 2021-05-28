@@ -1,0 +1,25 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "dateformat": "^3.0.2",
+    "lodash.merge": "^4.6.2",
+    "mapbox-gl": "0.41.0",
+    "material-ui": "^0.20.0",
+    "mqtt": "^4.2.6",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.1",
+    "react-scripts": "1.0.17",
+    "react-tap-event-plugin": "^3.0.2",
+    "react-websocket": "^2.0.0",
+    "turf": "^3.0.14"
+  },
+  "scripts": {
+    "start": "set PORT=3002 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

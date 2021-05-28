@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.App {
+}
+
+.Map {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 20px;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.7em;
+}
+
+.overlay {
+    position: absolute;
+    top: 35px;
+    left: 5px;
+}
+
+.overlay button {
+    font:300 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: #3386c0;
+    color: #fff;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.overlay button:hover {
+    background-color:#4ea0da;
+}
+
+.stats {
+    font-size: 0.75em;
+    position: absolute;
+    right: 3px;
+    top: 35px;
+    width: 160px;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 7px;
+}

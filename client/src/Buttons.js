@@ -6,7 +6,11 @@ export default class Buttons extends Component {
   constructor(props) {
     super(props);
     this.connectAndStartSimulation = this.connectAndStartSimulation.bind(this)
-    this.startSimulation = this.startSimulation.bind(this)
+    this.startSimulation = this.startSimulation.bind(this)    
+  }
+
+  componentDidUpdate() {
+    this.connectAndStartSimulation();
   }
 
   startSimulation() {
@@ -23,10 +27,7 @@ export default class Buttons extends Component {
 
   render() {
     return (
-      <div className='overlay'>
-        <button onClick={this.connectAndStartSimulation}>
-          Start Simulation
-        </button>
+      <div>
       </div>
     )
   }

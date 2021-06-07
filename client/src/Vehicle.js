@@ -8,7 +8,6 @@ export default class Vehicle {
     this.route = null
     //this.color = this.getRandomColor()
     this.layers = layers
-    //this.path = [];
   }
 
   addVehicleToMap(locationCoords) {
@@ -48,9 +47,7 @@ export default class Vehicle {
   }
 
   addRouteToVehicle(coords) {
-
     this.timeAdded = new Date().getTime()
-
     const routeId = "route" + this.id
     if (this.route != null) {
       this.layers.removeRoute(routeId)
@@ -80,10 +77,9 @@ export default class Vehicle {
   advance() {
     if (this.route != null) {
       const vehicleId = "vehicle" + this.id
-
       const actualTimePassed = new Date().getTime() - this.timeAdded
       // move the car 25 km/h and multiply that with the speedFactor
-      const position = process.env.REACT_APP_SPEED_FACTOR * actualTimePassed * 25 / 36000
+      const position = 80 * actualTimePassed * 25 / 36000
       const coordinates = this.route.geometry.coordinates
 
       if (position < coordinates.length) {

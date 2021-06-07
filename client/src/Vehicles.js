@@ -31,6 +31,7 @@ export default class Vehicles extends Component {
     /*if (isFirst) {
       this.props.map.jumpTo({ center: location, zoom: 11 })
     }*/
+    return true;
   }
 
   addRouteToVehicle(id, coords) {

@@ -23,16 +23,16 @@ export default class Map extends Component {
 
     const map = new MapboxGl.Map({
       container: this.container,
-      style: 'mapbox://styles/mapbox/streets-v9'
+      style: 'mapbox://styles/mapbox/streets-v10'
     })
 
     map.jumpTo({ center: [127.297758, 36.486779], zoom: 13 })
 
     map.addControl(new MapboxLanguageControl({defaultLanguage: 'ko'}))
 
-    map.on('load', (...args) => {
-      this.setState({ map })
-    })
+    // map.on('load', (...args) => {
+    //   this.setState({ map })
+    // })
 
     map.on('load', () => {
       map.addSource('route', {

@@ -60,7 +60,7 @@ export default class Layers {
       "source": routeId,
       "type": "line",
       "paint": {
-        "line-width": 2,
+        "line-width": 0,
         "line-color": '#3399FF'
       }
     }

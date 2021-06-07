@@ -7,7 +7,6 @@ export default class WebsocketInput {
     this.mqtt = Mqtt.connect('ws://localhost:9001')
 
     this.mqtt.on('message', function(topic, message) {
-      //console.log(JSON.parse(message));
       queue.offer(JSON.parse(message))
     })
 

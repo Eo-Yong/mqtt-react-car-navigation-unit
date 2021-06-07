@@ -45,19 +45,6 @@ export default class Animator extends Component {
         this.path.shift();
       }
     }
-
-
-    // if (event["event"] === "shift_start" && this.addVehicle === false) {
-    //   this.addVehicle = this.vehicles.addVehicle("car01", "토르 드라이브", [event["route"][0], event["route"][1]])
-    // } else {
-    //   const id = "car01";
-    //   this.path.push(event["route"]);
-
-    //   if (this.path.length === 2) {
-    //     this.vehicles.addRouteToVehicle(id, this.path);
-    //     this.path.shift();
-    //   }
-    // }
   }
 
   startSimulation() {

@@ -25,17 +25,30 @@ export default class Vehicles extends Component {
 
   addVehicle(id, name, location) {
     const vehicle = new Vehicle(id, name, this.layers)
-    //const isFirst = Object.keys(this.vehicles).length === 0
+     const isFirst = Object.keys(this.vehicles).length === 0
     vehicle.addVehicleToMap(location)
     this.vehicles[id] = vehicle
-    /*if (isFirst) {
-      this.props.map.jumpTo({ center: location, zoom: 11 })
-    }*/
+    if (isFirst) {
+      this.props.map.jumpTo({ center: location, zoom: 17 })
+    }
     return true;
   }
 
   addRouteToVehicle(id, coords) {
     const vehicle = this.vehicles[id]
+
+    let animationOptions = {
+      duration: 2000,
+      easing: function(t) {
+          return 1 - Math.pow(1 - t, 5);
+      },
+      animate: true,
+      essential: true,
+      center: coords[1]
+    }
+
+    this.props.map.flyTo(animationOptions);
+
     vehicle.addRouteToVehicle(coords)
   }
 

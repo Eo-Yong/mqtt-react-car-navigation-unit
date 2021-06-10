@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Vehicles from './Vehicles';
 import MapboxLanguageControl from '@mapbox/mapbox-gl-language';
 
+import Bus91 from './bus-91.png'
+
 export default class Map extends Component {
 
   static childContextTypes = {
@@ -33,6 +35,45 @@ export default class Map extends Component {
     // map.on('load', (...args) => {
     //   this.setState({ map })
     // })
+    map.on('load', function () {
+      // Load an image from an external URL.
+      map.loadImage(Bus91, function (error, image) {
+          if (error) throw error;
+
+          // Add the image to the map style.
+          map.addImage('bus-91', image);
+
+          // Add a data source containing one point feature.
+          // map.addSource('point', {
+          //     'type': 'geojson',
+          //     'data': {
+          //         'type': 'FeatureCollection',
+          //         'features': [
+          //             {
+          //                 'type': 'Feature',
+          //                 'geometry': {
+          //                     'type': 'Point',
+          //                     'coordinates': [127.28754248319437, 36.478197200174684]
+          //                 }
+          //             }
+          //         ]
+          //     }
+          // });
+
+          // Add a layer to use the image to represent the data.
+          // map.addLayer({
+          //     'id': 'points',
+          //     'type': 'symbol',
+          //     'source': 'point', // reference the data source
+          //     'layout': {
+          //         'icon-image': 'bus-91', // reference the image
+          //         'icon-size': 0.55
+          //     }
+          // });
+        }
+      );
+    });
+
 
     map.on('load', () => {
       map.addSource('route', {

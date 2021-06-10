@@ -12,16 +12,18 @@ export default class Layers {
       "type": "geojson",
       "data": location
     })
+
     this.map.addLayer({
       "id": vehicleId,
       "source": vehicleId,
       "type": "symbol",
       "layout": {
-        "icon-image": "car-15",
+        "icon-image": "bus-91",
+        'icon-size': 0.50,
         "text-field": "{title}",
         "text-size": 10,
         "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-        "text-offset": [0, 0.5],
+        "text-offset": [0, 1.0],
         "text-anchor": "top"
       }
     })
